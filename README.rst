@@ -32,7 +32,7 @@ Usage
        photo = FileField('photo')
        thumbnail = ThumbnailField('photo', '120', quality=80)
 
-       class Meta:
+       class Meta(object):
            queryset = Photo.objects.all()
            resource_name = 'photo'
            authentication = ApiKeyAuthentication()
