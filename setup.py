@@ -5,12 +5,12 @@ from setuptools import setup, find_packages
 from tastypie_sorl_thumbnail import __version__, __author__, __email__, __license__
 
 setup(
-    name="tastypie-sorl-thumbnail",
+    name="django-tastypie-sorl-thumbnail",
     version=__version__,
     author=__author__,
     author_email=__email__,
     url='https://github.com/tomi77/tastypie-sorl-thumbnail',
-    description='Django client for gddkia-impediments-on-roads',
+    description='sorl-thumbnail support for Django Tastypie',
     long_description=open("README.rst").read(),
     classifiers=[
         'Development Status :: 4 - Beta',
