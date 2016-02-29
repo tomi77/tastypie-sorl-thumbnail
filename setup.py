@@ -13,14 +13,7 @@ setup(
     description='sorl-thumbnail support for Django Tastypie',
     long_description=open("README.rst").read(),
     classifiers=[
-        'Development Status :: 4 - Beta',
-        'Framework :: Django',
-        'Framework :: Django :: 1.4',
-        'Framework :: Django :: 1.5',
-        'Framework :: Django :: 1.6',
-        'Framework :: Django :: 1.7',
-        'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
@@ -36,9 +29,10 @@ setup(
         'Topic :: Utilities',
     ],
     license=__license__,
-    packages=find_packages(exclude=['dj_impediments.tests', 'tests']),
+    packages=find_packages(exclude=['tastypie_sorl_thumbnail.tests']),
     install_requires=[
         'django-tastypie',
-        'sorl-thumbnail'
+        'sorl-thumbnail',
+        'six',
     ]
 )
