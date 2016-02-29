@@ -28,7 +28,7 @@ Usage
    from test.models import Photo
 
 
-   class VehiclePhotoResource(ModelResource):
+   class PhotoResource(ModelResource):
        photo = FileField('photo')
        thumbnail = ThumbnailField('photo', '120', quality=80)
 
