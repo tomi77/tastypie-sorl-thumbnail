@@ -7,9 +7,9 @@ matrix:
     - python: 2.7
       env: DJANGO=1.6.11 TASTYPIE=0.12.1
     - python: 2.7
-      env: DJANGO=1.9.2 TASTYPIE=0.13.3
+      env: DJANGO=1.9.3 TASTYPIE=0.13.3
     - python: 3.5
-      env: DJANGO=1.9.2 TASTYPIE=0.13.3
+      env: DJANGO=1.9.3 TASTYPIE=0.13.3
 
 install:
   - pip install coveralls sorl-thumbnail pyyaml pillow
