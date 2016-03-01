@@ -2,9 +2,12 @@ language: python
 
 matrix:
   include:
-    - env: DJANGO=1.4.22 TASTYPIE=0.9.16
-    - env: DJANGO=1.6.11 TASTYPIE=0.12.1
-    - env: DJANGO=1.9.2 TASTYPIE=0.13.3
+    - python: 2.7
+      env: DJANGO=1.4.22 TASTYPIE=0.9.16
+    - python: 2.7
+      env: DJANGO=1.6.11 TASTYPIE=0.12.1
+    - python: 2.7
+      env: DJANGO=1.9.2 TASTYPIE=0.13.3
     - python: 3.5
       env: DJANGO=1.9.2 TASTYPIE=0.13.3
 
