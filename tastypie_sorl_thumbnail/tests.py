@@ -25,9 +25,3 @@ class ThumbnailFieldTestCase(ResourceTestCase):
             'resource_uri': '/v1/photo/1/',
             'thumbnail': '/media/cache/image.png'
         })
-        # self.assertJSONEqual(content, {
-        #     'id': 1,
-        #     'image': '/media/image.png',
-        #     'resource_uri': '/v1/photo/1/',
-        #     'thumbnail': '/media/cache/image.png'
-        # })
