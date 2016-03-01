@@ -1,8 +1,5 @@
 language: python
 
-python:
-  - 2.7
-
 matrix:
   include:
     - env: DJANGO=1.4.22 TASTYPIE=0.9.16
