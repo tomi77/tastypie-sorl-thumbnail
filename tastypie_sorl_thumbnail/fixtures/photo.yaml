@@ -1,0 +1,5 @@
+-
+  model: 'test.photo'
+  pk: 1
+  fields:
+    image: 'image.png'

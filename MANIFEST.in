@@ -1,0 +1,1 @@
+exclude tastypie_sorl_thumbnail/tests.py
