@@ -12,7 +12,7 @@ matrix:
       env: DJANGO=1.9.2 TASTYPIE=0.13.3
 
 install:
-  - pip install coveralls sorl-thumbnail pyyaml
+  - pip install coveralls sorl-thumbnail pyyaml pillow
   - pip install -q django==$DJANGO django-tastypie==$TASTYPIE
   - pip install --upgrade mock
 
