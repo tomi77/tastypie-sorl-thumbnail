@@ -4,14 +4,14 @@ from six.moves.urllib.parse import urljoin  # pylint: disable=import-error
 
 from django.conf import settings
 from sorl.thumbnail import get_thumbnail
-from tastypie.fields import ApiField
+from tastypie.fields import FileField
 try:
     from tastypie import VERSION
 except ImportError:
     from tastypie import __version__ as VERSION
 
 
-class ThumbnailField(ApiField):
+class ThumbnailField(FileField):
     """
     A image thumbnail field.
     """
@@ -30,13 +30,17 @@ class ThumbnailField(ApiField):
         self.sorl_options = sorl_options
 
     def convert(self, value):
+        value = super(ThumbnailField, self).convert(value)
+
         if value is None:
             return None
 
+        image_path = '%s/%s' % (settings.MEDIA_ROOT, value)
+
         try:
-            image_path = '%s/%s' % (settings.MEDIA_ROOT, value)
             thumbnail = get_thumbnail(image_path, self.geometry_string,
                                       **self.sorl_options)
-            return urljoin(settings.MEDIA_URL, '%s' % thumbnail)
         except Exception:
             return None
+        else:
+            return urljoin(settings.MEDIA_URL, '%s' % thumbnail)

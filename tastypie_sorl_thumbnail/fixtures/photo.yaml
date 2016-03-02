@@ -3,3 +3,8 @@
   pk: 1
   fields:
     image: 'image.png'
+-
+  model: 'test.photo'
+  pk: 2
+  fields:
+    image: ~
