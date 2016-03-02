@@ -10,7 +10,7 @@ setup(
     author=__author__,
     author_email=__email__,
     url='https://github.com/tomi77/tastypie-sorl-thumbnail',
-    description='sorl-thumbnail support for Django Tastypie',
+    description='sorl-thumbnail support for a Django Tastypie',
     long_description=open("README.rst").read(),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
