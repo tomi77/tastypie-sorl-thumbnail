@@ -1,10 +1,10 @@
-sorl-thumbnail support for Django Tastypie.
+sorl-thumbnail support for a Django Tastypie.
 
 Table Of Contents
 =================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    quick_start
    release_notes/index
