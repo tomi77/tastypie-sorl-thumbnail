@@ -10,6 +10,8 @@ django-tastypie-sorl-thumbnail
 .. image:: https://coveralls.io/repos/github/tomi77/tastypie-sorl-thumbnail/badge.svg?branch=master
    :target: https://coveralls.io/github/tomi77/tastypie-sorl-thumbnail?branch=master
 
+``django-tastypie-sorl-thumbnail`` add a ``sorl-thumbnail`` support for a Django Tastypie.
+
 Installation
 ============
 
