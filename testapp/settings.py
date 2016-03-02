@@ -17,9 +17,9 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'tastypie_sorl_thumbnail',
     'tastypie',
-    'test',
+    'testapp',
 ]
 
-ROOT_URLCONF = 'test.urls'
+ROOT_URLCONF = 'testapp.urls'
 
 MEDIA_URL = '/media/'

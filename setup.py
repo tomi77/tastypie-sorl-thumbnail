@@ -29,7 +29,7 @@ setup(
         'Topic :: Utilities',
     ],
     license=__license__,
-    packages=find_packages(exclude=['test']),
+    packages=find_packages(exclude=['testapp']),
     install_requires=[
         'django-tastypie',
         'sorl-thumbnail',
