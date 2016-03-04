@@ -1,6 +1,6 @@
 from django import get_version
 
-VERSION = (0, 1, 1, 'final', 0)
+VERSION = (0, 1, 2, 'final', 0)
 __author__ = "Tomasz Jakub Rup"
 __email__ = "tomasz.rup@gmail.com"
 __version__ = get_version(VERSION)

@@ -22,4 +22,6 @@ INSTALLED_APPS = [
 
 ROOT_URLCONF = 'testapp.urls'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'http://example.com/media/'
+
+MEDIA_ROOT = '/home/media/'

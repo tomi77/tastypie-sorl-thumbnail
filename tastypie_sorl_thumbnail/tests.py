@@ -1,6 +1,7 @@
 import json
 
 import six
+from django.conf import settings
 from tastypie.test import ResourceTestCase
 try:
     from unittest import mock
@@ -13,7 +14,7 @@ class ThumbnailFieldTestCase(ResourceTestCase):
 
     @mock.patch('tastypie_sorl_thumbnail.fields.get_thumbnail')
     def test_with_image(self, mock_get_thumbnail):
-        mock_get_thumbnail.return_value = 'cache/image.png'
+        mock_get_thumbnail.side_effect = lambda path, *args, **kwargs: 'cache%s' % path[len(settings.MEDIA_ROOT):]
 
         response = self.api_client.get('/v1/photo/1/')
         self.assertValidJSONResponse(response)
@@ -21,9 +22,9 @@ class ThumbnailFieldTestCase(ResourceTestCase):
         content = json.loads(content)
         self.assertEqual(content, {
             'id': 1,
-            'image': '/media/image.png',
+            'image': 'http://example.com/media/image.png',
             'resource_uri': '/v1/photo/1/',
-            'thumbnail': '/media/cache/image.png'
+            'thumbnail': 'http://example.com/media/cache/image.png'
         })
 
     @mock.patch('tastypie_sorl_thumbnail.fields.get_thumbnail')

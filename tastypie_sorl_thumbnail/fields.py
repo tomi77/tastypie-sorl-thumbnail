@@ -35,6 +35,9 @@ class ThumbnailField(FileField):
         if value is None:
             return None
 
+        if value.startswith(settings.MEDIA_URL):
+            value = value[len(settings.MEDIA_URL):]
+
         image_path = '%s/%s' % (settings.MEDIA_ROOT, value)
 
         try:
