@@ -14,7 +14,7 @@ class ThumbnailFieldTestCase(ResourceTestCase):
 
     @mock.patch('tastypie_sorl_thumbnail.fields.get_thumbnail')
     def test_with_image(self, mock_get_thumbnail):
-        mock_get_thumbnail.side_effect = lambda path, *args, **kwargs: 'cache%s' % path[len(settings.MEDIA_ROOT):]
+        mock_get_thumbnail.side_effect = lambda path, *args, **kwargs: 'cache/%s' % path[len(settings.MEDIA_ROOT):]
 
         response = self.api_client.get('/v1/photo/1/')
         self.assertValidJSONResponse(response)

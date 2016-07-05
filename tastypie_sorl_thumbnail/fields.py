@@ -1,10 +1,13 @@
 from __future__ import unicode_literals
 
+import os
+
 from six.moves.urllib.parse import urljoin  # pylint: disable=import-error
 
 from django.conf import settings
 from sorl.thumbnail import get_thumbnail
 from tastypie.fields import FileField
+
 try:
     from tastypie import VERSION
 except ImportError:
@@ -38,7 +41,10 @@ class ThumbnailField(FileField):
         if value.startswith(settings.MEDIA_URL):
             value = value[len(settings.MEDIA_URL):]
 
-        image_path = '%s/%s' % (settings.MEDIA_ROOT, value)
+        media_root = settings.MEDIA_ROOT \
+            if settings.MEDIA_ROOT[-1] != os.path.sep \
+            else settings.MEDIA_ROOT[:-1]
+        image_path = '%s%s%s' % (media_root, os.path.sep, value)
 
         try:
             thumbnail = get_thumbnail(image_path, self.geometry_string,
