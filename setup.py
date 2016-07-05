@@ -33,6 +33,5 @@ setup(
     install_requires=[
         'django-tastypie',
         'sorl-thumbnail',
-        'six',
     ]
 )
