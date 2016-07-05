@@ -1,0 +1,12 @@
+======
+v0.1.3
+======
+
+
+**Bugfixes**
+
+- fix creating path to image when MEDIA_ROOT ends with slash
+
+**Other**
+
+- remove ``six`` dependency
