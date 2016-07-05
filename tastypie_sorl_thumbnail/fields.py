@@ -39,9 +39,7 @@ class ThumbnailField(FileField):
         if value.startswith(settings.MEDIA_URL):
             value = value[len(settings.MEDIA_URL):]
 
-        media_root = settings.MEDIA_ROOT \
-            if settings.MEDIA_ROOT[-1] != os.path.sep \
-            else settings.MEDIA_ROOT[:-1]
+        media_root = settings.MEDIA_ROOT.rstrip(os.path.sep)
         image_path = '%s%s%s' % (media_root, os.path.sep, value)
 
         try:
