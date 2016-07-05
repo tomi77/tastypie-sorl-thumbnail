@@ -2,8 +2,6 @@ from __future__ import unicode_literals
 
 import os
 
-from six.moves.urllib.parse import urljoin  # pylint: disable=import-error
-
 from django.conf import settings
 from sorl.thumbnail import get_thumbnail
 from tastypie.fields import FileField
@@ -52,4 +50,4 @@ class ThumbnailField(FileField):
         except Exception:
             return None
         else:
-            return urljoin(settings.MEDIA_URL, '%s' % thumbnail)
+            return thumbnail.url
