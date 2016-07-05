@@ -2,13 +2,13 @@
 django-tastypie-sorl-thumbnail
 ==============================
 
-.. image:: https://codeclimate.com/github/tomi77/tastypie-sorl-thumbnail/badges/gpa.svg
-   :target: https://codeclimate.com/github/tomi77/tastypie-sorl-thumbnail
-   :alt: Code Climate
 .. image:: https://travis-ci.org/tomi77/tastypie-sorl-thumbnail.svg?branch=master
    :target: https://travis-ci.org/tomi77/tastypie-sorl-thumbnail
 .. image:: https://coveralls.io/repos/github/tomi77/tastypie-sorl-thumbnail/badge.svg?branch=master
    :target: https://coveralls.io/github/tomi77/tastypie-sorl-thumbnail?branch=master
+.. image:: https://codeclimate.com/github/tomi77/tastypie-sorl-thumbnail/badges/gpa.svg
+   :target: https://codeclimate.com/github/tomi77/tastypie-sorl-thumbnail
+   :alt: Code Climate
 
 Add a ``sorl-thumbnail`` support for a Django Tastypie.
 
