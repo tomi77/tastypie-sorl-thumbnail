@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 
+import logging
+
 from sorl.thumbnail import get_thumbnail
 from tastypie.fields import FileField
 
@@ -7,6 +9,8 @@ try:
     from tastypie import VERSION
 except ImportError:
     from tastypie import __version__ as VERSION
+
+logger = logging.getLogger('tastypie-sorl-thumbnail')
 
 
 class ThumbnailField(FileField):
@@ -35,5 +39,6 @@ class ThumbnailField(FileField):
             value = get_thumbnail(value.path, self.geometry_string,
                                   **self.sorl_options)
             return value.url
-        except Exception:
+        except Exception as e:
+            logger.debug(e)
             return None
