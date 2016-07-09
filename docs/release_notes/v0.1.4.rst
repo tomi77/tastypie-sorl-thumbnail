@@ -1,0 +1,9 @@
+======
+v0.1.4
+======
+
+
+**News**
+
+- add some debug info
+- add logger configuration
