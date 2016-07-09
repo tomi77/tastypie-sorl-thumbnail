@@ -33,5 +33,13 @@ setup(
     install_requires=[
         'django-tastypie',
         'sorl-thumbnail',
+    ],
+    test_suite='testapp.runtests.runtests',
+    tests_require=[
+        'six',
+        'django',
+        'mock',
+        'pyyaml',
+        'pillow',
     ]
 )
