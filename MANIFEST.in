@@ -1,2 +1,0 @@
-exclude tastypie_sorl_thumbnail/tests.py
-exclude tastypie_sorl_thumbnail/models.py
