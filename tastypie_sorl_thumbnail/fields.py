@@ -1,8 +1,5 @@
 from __future__ import unicode_literals
 
-import os
-
-from django.conf import settings
 from sorl.thumbnail import get_thumbnail
 from tastypie.fields import FileField
 
@@ -31,21 +28,12 @@ class ThumbnailField(FileField):
         self.sorl_options = sorl_options
 
     def convert(self, value):
-        value = super(ThumbnailField, self).convert(value)
-
         if value is None:
             return None
 
-        if value.startswith(settings.MEDIA_URL):
-            value = value[len(settings.MEDIA_URL):]
-
-        media_root = settings.MEDIA_ROOT.rstrip(os.path.sep)
-        image_path = '%s%s%s' % (media_root, os.path.sep, value)
-
         try:
-            thumbnail = get_thumbnail(image_path, self.geometry_string,
-                                      **self.sorl_options)
+            value = get_thumbnail(value.path, self.geometry_string,
+                                  **self.sorl_options)
+            return value.url
         except Exception:
             return None
-        else:
-            return thumbnail.url
