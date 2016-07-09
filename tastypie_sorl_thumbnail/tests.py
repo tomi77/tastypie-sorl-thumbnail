@@ -2,15 +2,28 @@ import json
 
 import six
 from django.conf import settings
-from tastypie.test import ResourceTestCase
 from sorl.thumbnail.images import ImageFile
 try:
     from unittest import mock
 except ImportError:
     from mock import mock
 
+try:
+    from tastypie.test import ResourceTestCaseMixin
+    from django.test import TestCase
 
-class ThumbnailFieldTestCase(ResourceTestCase):
+
+    class ThumbnailFieldTestCaseBase(ResourceTestCaseMixin, TestCase):
+        pass
+except ImportError:
+    from tastypie.test import ResourceTestCase
+
+
+    class ThumbnailFieldTestCaseBase(ResourceTestCase):
+        pass
+
+
+class ThumbnailFieldTestCase(ThumbnailFieldTestCaseBase):
     fixtures = ['photo.yaml']
 
     @mock.patch('tastypie_sorl_thumbnail.fields.get_thumbnail')
