@@ -41,3 +41,10 @@ Usage
            resource_name = 'photo'
            authentication = Authentication()
            authorization = Authorization()
+
+Testing
+=======
+
+::
+
+   $ python setup.py test
