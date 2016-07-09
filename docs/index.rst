@@ -7,5 +7,6 @@ Table Of Contents
    :maxdepth: 2
 
    quick_start
+   logging
    testing
    release_notes/index

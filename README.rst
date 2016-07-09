@@ -42,6 +42,11 @@ Usage
            authentication = Authentication()
            authorization = Authorization()
 
+Logging
+=======
+
+Configure ``tastypie-sorl-thumbnail`` logger.
+
 Testing
 =======
 
