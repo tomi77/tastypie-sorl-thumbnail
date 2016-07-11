@@ -3,6 +3,10 @@ v0.1.4
 ======
 
 
+**Fix**
+
+- fix generating thumbnails from images with non-ascii chars in filename
+
 **News**
 
 - add some debug info
