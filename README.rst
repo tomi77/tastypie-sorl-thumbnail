@@ -20,6 +20,11 @@ Install package via ``pip``
 
     pip install django-tastypie-sorl-thumbnail
 
+Documentation
+=============
+
+http://tomi77.github.io/tastypie-sorl-thumbnail/html/
+
 Usage
 =====
 
